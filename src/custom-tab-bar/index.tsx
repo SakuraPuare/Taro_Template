@@ -14,27 +14,27 @@ export default class Index extends Component {
         pagePath: '/pages/index/index',
         selectedIconPath: '../images/tabbar_home_on.png',
         iconPath: '../images/tabbar_home.png',
-        text: '首页'
+        text: '首页',
       },
       {
         pagePath: '/pages/cate/index',
         selectedIconPath: '../images/tabbar_cate_on.png',
         iconPath: '../images/tabbar_cate.png',
-        text: '分类'
+        text: '分类',
       },
       {
         pagePath: '/pages/cart/index',
         selectedIconPath: '../images/tabbar_cart_on.png',
         iconPath: '../images/tabbar_cart.png',
-        text: '购物车'
+        text: '购物车',
       },
       {
         pagePath: '/pages/my/index',
         selectedIconPath: '../images/tabbar_my_on.png',
         iconPath: '../images/tabbar_my.png',
-        text: '个人中心'
-      }
-    ]
+        text: '个人中心',
+      },
+    ],
   }
 
   switchTab(index, url) {
@@ -42,9 +42,9 @@ export default class Index extends Component {
     Taro.switchTab({ url })
   }
 
-  setSelected (idx: number) {
+  setSelected(idx: number) {
     this.setState({
-      selected: idx
+      selected: idx,
     })
   }
 
@@ -52,11 +52,11 @@ export default class Index extends Component {
     const { list, selected, color, selectedColor } = this.state
 
     return (
-      <CoverView className='tab-bar'>
-        <CoverView className='tab-bar-border'></CoverView>
+      <CoverView className="tab-bar">
+        <CoverView className="tab-bar-border"></CoverView>
         {list.map((item, index) => {
           return (
-            <CoverView key={index} className='tab-bar-item' onClick={this.switchTab.bind(this, index, item.pagePath)}>
+            <CoverView key={index} className="tab-bar-item" onClick={this.switchTab.bind(this, index, item.pagePath)}>
               <CoverImage src={selected === index ? item.selectedIconPath : item.iconPath} />
               <CoverView style={{ color: selected === index ? selectedColor : color }}>{item.text}</CoverView>
             </CoverView>

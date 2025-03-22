@@ -5,15 +5,14 @@ import './app.scss'
 import './app.css'
 
 class App extends Component {
+  componentDidMount() {}
 
-  componentDidMount () {}
+  componentDidShow() {}
 
-  componentDidShow () {}
-
-  componentDidHide () {}
+  componentDidHide() {}
 
   // this.props.children 是将要会渲染的页面
-  render () {
+  render() {
     return this.props.children
   }
 }

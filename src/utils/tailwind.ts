@@ -8,13 +8,13 @@ import { twMerge } from '@weapp-tailwindcss/merge'
  */
 export const twClassNames = (baseClasses, conditionalClasses = {}) => {
   const allClasses = [baseClasses]
-  
+
   Object.entries(conditionalClasses).forEach(([className, condition]) => {
     if (condition) {
       allClasses.push(className)
     }
   })
-  
+
   return twMerge(...allClasses)
 }
 
@@ -27,7 +27,7 @@ export const twClassNames = (baseClasses, conditionalClasses = {}) => {
  */
 export const twVariant = (variants, currentVariant, defaultClasses = '') => {
   if (!variants || !currentVariant) return defaultClasses
-  
+
   const variantClasses = variants[currentVariant] || ''
   return twMerge(defaultClasses, variantClasses)
 }

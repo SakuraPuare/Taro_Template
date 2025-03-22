@@ -2,19 +2,19 @@ import { Component } from 'react'
 import { View, Text } from '@tarojs/components'
 import Taro from '@tarojs/taro'
 
-import type CustomTabBar from '../../custom-tab-bar'
+import type CustomTabBar from '@/custom-tab-bar'
 
 export default class Index extends Component {
   pageCtx = Taro.getCurrentInstance().page
 
-  componentDidShow () {
+  componentDidShow() {
     const tabbar = Taro.getTabBar<CustomTabBar>(this.pageCtx)
     tabbar?.setSelected(2)
   }
 
-  render () {
+  render() {
     return (
-      <View className='index'>
+      <View className="index">
         <Text>我是购物车！</Text>
       </View>
     )
