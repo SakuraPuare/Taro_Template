@@ -20,6 +20,7 @@ export default class Index extends Component {
           <Text className='text-[55rpx] text-[#fff]'>Hello world!</Text>
         </View>
         <AtButton type='primary'>按钮文案</AtButton>
+        <View className='i-mdi-home text-3xl text-red-6000' />
       </View>
     )
   }
