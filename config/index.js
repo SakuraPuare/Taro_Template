@@ -1,4 +1,4 @@
-const { UnifiedWebpackPluginV5 } = require('weapp-tailwindcss/webpack')
+import { UnifiedWebpackPluginV5 } from 'weapp-tailwindcss/webpack'
 
 const config = {
   projectName: 'custom-tabbar-react',
@@ -44,7 +44,7 @@ const config = {
         }
       }
     },
-    webpackChain(chain, webpack) {
+    webpackChain(chain) {
       chain.merge({
         plugin: {
           install: {
@@ -60,6 +60,7 @@ const config = {
   h5: {
     publicPath: '/',
     staticDirectory: 'static',
+    esnextModules: ['taro-ui'],
     postcss: {
       autoprefixer: {
         enable: true,
