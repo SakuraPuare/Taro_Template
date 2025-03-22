@@ -1,3 +1,5 @@
+const { UnifiedWebpackPluginV5 } = require('weapp-tailwindcss/webpack')
+
 const config = {
   projectName: 'custom-tabbar-react',
   date: '2022-2-22',
@@ -41,6 +43,18 @@ const config = {
           generateScopedName: '[name]__[local]___[hash:base64:5]'
         }
       }
+    },
+    webpackChain(chain, webpack) {
+      chain.merge({
+        plugin: {
+          install: {
+            plugin: UnifiedWebpackPluginV5,
+            args: [{
+              appType: 'taro'
+            }]
+          }
+        }
+      })
     }
   },
   h5: {

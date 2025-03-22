@@ -55,6 +55,7 @@
     "@tarojs/shared": "4.0.9",
     "@tarojs/taro": "4.0.9",
     "@tarojs/taro-h5": "4.0.9",
+    "prettier": "^3.5.3",
     "react": "^17.0.0",
     "react-dom": "^17.0.0",
     "webpack": "^5.98.0"
