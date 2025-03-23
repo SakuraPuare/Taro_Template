@@ -19,6 +19,7 @@
 本项目实现了微信小程序的自定义 TabBar 组件，并使用了 `Taro.getTabBar` 去管理 TabBar 的状态。
 
 相关文档：
+
 - Taro 微信小程序自定义 TabBar 开发文档：https://docs.taro.zone/docs/miniprogram-plugin
 - 微信小程序自定义 TabBar 文档：https://developers.weixin.qq.com/miniprogram/dev/framework/ability/custom-tabbar.html
 
@@ -27,6 +28,7 @@
 ### 环境准备
 
 确保你已安装以下工具：
+
 - Node.js (推荐使用 14.x 或以上版本)
 - Yarn 或 npm
 

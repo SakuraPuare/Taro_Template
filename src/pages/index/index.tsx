@@ -8,7 +8,7 @@ import { ADD } from '@/redux/constant/counter'
 export default function Index() {
   const counter = useSelector((state: any) => state.counter)
   const dispatch = useDispatch()
-  
+
   useDidShow(() => {
     const pageCtx = Taro.getCurrentInstance().page
     const tabbar = Taro.getTabBar<CustomTabBar>(pageCtx)
