@@ -1,8 +1,5 @@
 {
-  "extends": [
-    "taro/react",
-    "plugin:tailwindcss/recommended"
-  ],
+  "extends": ["taro/react"],
   "rules": {
     "react/jsx-uses-react": "off",
     "react/react-in-jsx-scope": "off",
@@ -10,15 +7,5 @@
       "error",
       "prefer-double"
     ]
-  },
-  "overrides": [
-    {
-      "files": [
-        "*.ts",
-        "*.tsx",
-        "*.js"
-      ],
-      "parser": "@typescript-eslint/parser"
-    }
-  ]
+  }
 }

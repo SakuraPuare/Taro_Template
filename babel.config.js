@@ -3,11 +3,12 @@
 module.exports = {
   presets: [
     [
-      'taro',
+      "taro",
       {
-        framework: 'react',
+        framework: "react",
         ts: true,
+        compiler: "webpack5",
       },
     ],
   ],
-}
+};

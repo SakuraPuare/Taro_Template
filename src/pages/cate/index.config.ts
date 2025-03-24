@@ -1,4 +1,4 @@
 export default definePageConfig({
-  navigationBarTitleText: '分类页',
+  navigationBarTitleText: "分类页",
   usingComponents: {},
-})
+});

@@ -1,15 +1,15 @@
-import { Component } from 'react'
-import { View, Text } from '@tarojs/components'
-import Taro from '@tarojs/taro'
+import { Component } from "react";
+import { View, Text } from "@tarojs/components";
+import Taro from "@tarojs/taro";
 
-import type CustomTabBar from '@/custom-tab-bar'
+import type CustomTabBar from "@/custom-tab-bar";
 
 export default class Index extends Component {
-  pageCtx = Taro.getCurrentInstance().page
+  pageCtx = Taro.getCurrentInstance().page;
 
   componentDidShow() {
-    const tabbar = Taro.getTabBar<CustomTabBar>(this.pageCtx)
-    tabbar?.setSelected(2)
+    const tabbar = Taro.getTabBar<CustomTabBar>(this.pageCtx);
+    tabbar?.setSelected(2);
   }
 
   render() {
@@ -17,6 +17,6 @@ export default class Index extends Component {
       <View className="index">
         <Text>我是购物车！</Text>
       </View>
-    )
+    );
   }
 }

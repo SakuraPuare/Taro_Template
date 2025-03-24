@@ -1,4 +1,4 @@
-import { twMerge } from '@weapp-tailwindcss/merge'
+import { twMerge } from "@weapp-tailwindcss/merge";
 
 /**
  * 条件性添加类名
@@ -7,16 +7,16 @@ import { twMerge } from '@weapp-tailwindcss/merge'
  * @returns {string} - 合并后的类名字符串
  */
 export const twClassNames = (baseClasses, conditionalClasses = {}) => {
-  const allClasses = [baseClasses]
+  const allClasses = [baseClasses];
 
   Object.entries(conditionalClasses).forEach(([className, condition]) => {
     if (condition) {
-      allClasses.push(className)
+      allClasses.push(className);
     }
-  })
+  });
 
-  return twMerge(...allClasses)
-}
+  return twMerge(...allClasses);
+};
 
 /**
  * 根据变体生成类名
@@ -25,9 +25,9 @@ export const twClassNames = (baseClasses, conditionalClasses = {}) => {
  * @param {string} defaultClasses - 默认类名
  * @returns {string} - 合并后的类名字符串
  */
-export const twVariant = (variants, currentVariant, defaultClasses = '') => {
-  if (!variants || !currentVariant) return defaultClasses
+export const twVariant = (variants, currentVariant, defaultClasses = "") => {
+  if (!variants || !currentVariant) return defaultClasses;
 
-  const variantClasses = variants[currentVariant] || ''
-  return twMerge(defaultClasses, variantClasses)
-}
+  const variantClasses = variants[currentVariant] || "";
+  return twMerge(defaultClasses, variantClasses);
+};

@@ -1,22 +1,14 @@
-import { View, Text } from '@tarojs/components'
-import Taro, { useDidShow } from '@tarojs/taro'
-import { AtButton } from 'taro-ui'
-import type CustomTabBar from '@/custom-tab-bar'
-import { useSelector, useDispatch } from 'react-redux'
-import { ADD } from '@/redux/constant/counter'
+import { View, Text } from "@tarojs/components";
+import { AtButton } from "taro-ui";
+import { useSelector, useDispatch } from "react-redux";
+import { ADD } from "@/redux/constant/counter";
 
 export default function Index() {
-  const counter = useSelector((state: any) => state.counter)
-  const dispatch = useDispatch()
-
-  useDidShow(() => {
-    const pageCtx = Taro.getCurrentInstance().page
-    const tabbar = Taro.getTabBar<CustomTabBar>(pageCtx)
-    tabbar?.setSelected(0)
-  })
+  const counter = useSelector((state: any) => state.counter);
+  const dispatch = useDispatch();
 
   return (
-    <View className="index">
+    <View>
       <Text>我是首页！</Text>
       <View className="index bg-[#123456]">
         <Text className="text-[55rpx] text-[#fff]">Hello world!</Text>
@@ -30,6 +22,11 @@ export default function Index() {
           增加
         </AtButton>
       </View>
+
+      <View className="h-14 bg-gradient-to-r from-cyan-500 to-blue-500"></View>
+      <View className="h-14 bg-gradient-to-r from-sky-500 to-indigo-500"></View>
+      <View className="h-14 bg-gradient-to-r from-violet-500 to-fuchsia-500"></View>
+      <View className="h-14 bg-gradient-to-r from-purple-500 to-pink-500"></View>
     </View>
-  )
+  );
 }
